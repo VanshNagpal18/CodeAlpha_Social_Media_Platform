@@ -147,43 +147,4 @@ colorPalette.forEach(color => {
 })
 
 // bg
-let lightColorLightness;
-let darkColorLightness;
-let whiteColorLightness;
 
-const changeBG = () => {
-    root.style.setProperty('--dark-color-lightness', darkColorLightness);
-    root.style.setProperty('--light-color-lightness', lightColorLightness);
-    root.style.setProperty('--white-color-lightness', whiteColorLightness);
-}
-
-bg1.addEventListener('click', () => {
-   bg1.classList.add('active');
-   bg2.classList.remove('active'); 
-   bg3.classList.remove('active');
-
-   window.location.reload();
-})
-
-
-bg2.addEventListener('click', () => {
-    darkColorLightness = '95%';
-    whiteColorLightness = '20%';
-    lightColorLightness = '15%';
-
-    bg2.classList.add('active');
-    bg1.classList.remove('active');
-    bg3.classList.remove('active');
-    changeBG();
-})
-
-bg3.addEventListener('click', () => {
-    darkColorLightness = '95%';
-    whiteColorLightness = '10%';
-    lightColorLightness = '0%';
-
-    bg3.classList.add('active');
-    bg1.classList.remove('active');
-    bg2.classList.remove('active');
-    changeBG();
-})
