@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             user.style.display = 'none';
         }
     })
-}
+})
   
   messageSearch.addEventListener('keyup', searchMessage);
   const messagesNotification = document.querySelector('#messages-notification');
