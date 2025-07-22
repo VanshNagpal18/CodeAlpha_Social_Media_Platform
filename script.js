@@ -35,10 +35,8 @@ const messages = document.querySelector('.messages');
 const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
 
-
-
-const searchMessage = () => {
-    const val = messageSearch.value.toLowerCase();
+document.addEventListener('DOMContentLoaded', function() {
+     const val = messageSearch.value.toLowerCase();
    
     message.forEach(user => {
         let name = user.querySelector('h5').textContent.toLowerCase();
@@ -49,27 +47,56 @@ const searchMessage = () => {
         }
     })
 }
-messageSearch.addEventListener('keyup', searchMessage);
-const messagesNotification = document.querySelector('#messages-notification');
-messagesNotification.addEventListener('click', () => {
-     messages.style.boxShadow = '0 0 1rem var(--color-primary)';
-     messagesNotification.querySelector('.notifications-count').style.display = 'none';
-     setTimeout(() => {
-       messages.style.boxShadow ='none';
-     },2000);
-})
-
-
-const openThemeModal = () => {
-    themeModal.style.display = 'grid';
-}
-  const closeThemeModal = (e) => {
-    if(e.target.classList.contains('customize-theme')){
-        themeModal.style.display  = 'none';
-    }
-  }
   
-themeModal.addEventListener('click', closeThemeModal);
+  messageSearch.addEventListener('keyup', searchMessage);
+  const messagesNotification = document.querySelector('#messages-notification');
+  messagesNotification.addEventListener('click', () => {
+       messages.style.boxShadow = '0 0 1rem var(--color-primary)';
+       messagesNotification.querySelector('.notifications-count').style.display = 'none';
+       setTimeout(() => {
+         messages.style.boxShadow ='none';
+       },2000);
+  })
+
+  // ... rest of your code
+
+  const openThemeModal = () => {
+      themeModal.style.display = 'grid';
+  }
+    const closeThemeModal = (e) => {
+      if(e.target.classList.contains('customize-theme')){
+          themeModal.style.display  = 'none';
+      }
+    }
+
+  // Make sure themeModal is declared and assigned before this line
+  themeModal.addEventListener('click', closeThemeModal);
+});
+
+
+// const searchMessage = () => {
+//    
+// messageSearch.addEventListener('keyup', searchMessage);
+// const messagesNotification = document.querySelector('#messages-notification');
+// messagesNotification.addEventListener('click', () => {
+//      messages.style.boxShadow = '0 0 1rem var(--color-primary)';
+//      messagesNotification.querySelector('.notifications-count').style.display = 'none';
+//      setTimeout(() => {
+//        messages.style.boxShadow ='none';
+//      },2000);
+// })
+
+
+// const openThemeModal = () => {
+//     themeModal.style.display = 'grid';
+// }
+//   const closeThemeModal = (e) => {
+//     if(e.target.classList.contains('customize-theme')){
+//         themeModal.style.display  = 'none';
+//     }
+//   }
+  
+// themeModal.addEventListener('click', closeThemeModal);
 theme.addEventListener('click', openThemeModal);
 
 const removeSizeSelector = () => {
