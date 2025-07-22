@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Make sure themeModal is declared and assigned before this line
   themeModal.addEventListener('click', closeThemeModal);
-});
+
 
 
 // const searchMessage = () => {
