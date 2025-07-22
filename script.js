@@ -30,7 +30,7 @@ menuItems.forEach(item => {
     }
  })
 })
-const messagesNotification = document.querySelector('#messages-notification');
+
 const messages = document.querySelector('.messages');
 const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
@@ -49,9 +49,8 @@ const searchMessage = () => {
         }
     })
 }
-
 messageSearch.addEventListener('keyup', searchMessage);
-
+const messagesNotification = document.querySelector('#messages-notification');
 messagesNotification.addEventListener('click', () => {
      messages.style.boxShadow = '0 0 1rem var(--color-primary)';
      messagesNotification.querySelector('.notifications-count').style.display = 'none';
