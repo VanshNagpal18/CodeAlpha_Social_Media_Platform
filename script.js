@@ -33,7 +33,7 @@ menuItems.forEach(item => {
 const messagesNotification = document.querySelector('#messages-notification');
 const messages = document.querySelector('.messages');
 const message = messages.querySelectorAll('.message');
-const messageSearch = document.querySelector('#message-search');
+const messageSearch = document.getElementById('#message-search');
 
 
 
